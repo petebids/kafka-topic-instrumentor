@@ -1,0 +1,14 @@
+management:
+    endpoint:
+        info:
+            enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: health,metrics,prometheus,loggers
+spring:
+  kafka:
+      consumer:
+          key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+      bootstrap-servers: localhost:29092
